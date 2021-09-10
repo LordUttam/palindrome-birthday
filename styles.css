@@ -1,0 +1,165 @@
+
+body {
+    height: max-content;
+    background: linear-gradient(to right, #d9a7c7, #fffcdc);
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    overflow: auto;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 8vh;
+    margin: 2rem;
+    color: #000;
+}
+
+main {
+    display: flex;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+}
+
+#description {
+    flex-basis: 55%;
+    font-size: 24px;
+    border-right: 2px solid white;
+    
+}
+
+#description h2 {
+    font-size: 5vh;
+    margin: 1rem;
+}
+
+#description p {
+    font-weight: lighter;
+    margin: 1rem;
+    text-align: left;
+    font-size: 3vh;
+    overflow-wrap: normal;
+}
+
+#ip-op {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 45%;
+}
+
+#inputs {
+    flex-basis: 30%;
+    text-align: center;
+    padding: 1rem;
+}
+
+#datePicker {
+    border-radius: 10000px;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid white;
+    outline: none;
+}
+
+#submitBtn {
+    margin: 1vh;
+    padding: .5rem 1.5rem;
+    border-radius: 10000PX;
+    border: 2px solid white;
+    background-color: #C3FCF2;
+    outline: none;
+}
+
+#result {
+    flex-basis: 70%;
+    text-align: center;
+    font-size: 4vh;
+}
+
+footer {
+    text-align: center;
+    height: 20vh;
+}
+
+footer p {
+    margin: 0px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0px;
+}
+
+.social-links li {
+    display: inline-block;
+    padding: 0 1rem 1rem 0;
+    margin-bottom: 0px;
+}
+
+footer img {
+    width: 2.5vw;
+}
+
+@media (orientation: portrait) {
+    body {
+        overflow: auto;
+    }
+    
+    header h1 {
+        font-size: 10vw;
+        margin: .75rem;
+        color: #fff;
+    }
+
+    #description {
+        border: none;
+    }
+    #description h2 {
+        font-size: 5vw;
+        margin: 1rem;
+    }
+    
+    #description p {
+        font-size: 5vw;
+    }
+
+    main {
+        display: block;
+        height: max-content;
+        width: 100%;
+    }
+ 
+    #result {
+        font-size: 5vw;
+    }
+        
+    #datePicker {
+        border-radius: 10000px;
+        padding: .5rem 1.5rem;
+        font-size: 5vw;
+    }
+
+    #submitBtn {
+        margin: 1vh;
+        padding: 0.5rem 1.5rem;
+        border-radius: 10000PX;
+        font-size: 5vw;
+    }
+    
+    footer p {
+        font-size: 3vw;
+    }
+
+    .social-links li {
+        display: inline-block;
+        padding: 0 1rem 1rem 0;
+    }
+    
+    footer img {
+        width: 8vw;
+    }
+}
