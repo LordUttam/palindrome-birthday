@@ -177,7 +177,7 @@ function getNextPalindromeDate(date) {
   }
 }
 
-function clickHandler() {
+function getResult() {
   let datePicked = datePicker.value;
 
   if (datePicked !== "") {
@@ -215,6 +215,17 @@ function clickHandler() {
       }
     }
   }
+}
+
+function clickHandler() {
+  resultDiv.innerText = "";
+  let loadingImage = document.createElement("IMG");
+  loadingImage.setAttribute("src", "./images/icons8-hourglass-transparent.gif");
+  loadingImage.setAttribute("alt", "Processing...");
+  resultDiv.appendChild(loadingImage);
+  setTimeout(function () {
+    getResult();
+  }, 3000);
 }
 
 submitBtn.addEventListener("click", clickHandler);
