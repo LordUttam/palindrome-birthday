@@ -219,13 +219,20 @@ function getResult() {
 
 function clickHandler() {
   resultDiv.innerText = "";
-  let loadingImage = document.createElement("IMG");
-  loadingImage.setAttribute("src", "./images/icons8-hourglass-transparent.gif");
-  loadingImage.setAttribute("alt", "Processing...");
-  resultDiv.appendChild(loadingImage);
-  setTimeout(function () {
-    getResult();
-  }, 3000);
+  if (datePicker.value != "") {
+    let loadingImage = document.createElement("IMG");
+    loadingImage.setAttribute(
+      "src",
+      "./images/icons8-hourglass-transparent.gif"
+    );
+    loadingImage.setAttribute("alt", "Processing...");
+    resultDiv.appendChild(loadingImage);
+    setTimeout(function () {
+      getResult();
+    }, 3000);
+  } else {
+    resultDiv.innerText = `Input can't be empty. Please fill it and try again.`;
+  }
 }
 
 submitBtn.addEventListener("click", clickHandler);
